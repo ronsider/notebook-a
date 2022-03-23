@@ -50,4 +50,7 @@ TEST_CASE("The length of row mustn't excced 100")
     CHECK_THROWS(notebook.write(19,19,99,ariel::Direction::Horizontal,"312aa"));
     CHECK_THROWS(notebook.write(19,19,90,ariel::Direction::Horizontal,"123456789000"));
     CHECK_THROWS(notebook.write(20,21,95,ariel::Direction::Horizontal,"5555555555"));
+
+    CHECK_NOTHROW(notebook.write(3,2,2,ariel::Direction::Horizontal,"24"));
+    CHECK_NOTHROW(notebook.write(5,6,9,ariel::Direction::Horizontal,"14"));
 }
